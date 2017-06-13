@@ -14,12 +14,13 @@ private:
 	uint8_t* originalBit;  // total: ceil(n / 8) * 8 bit
 	size_t originalBitLength;
 
+	uint8_t popCount(uint8_t bits);
+
 public:
 	~FID();
 	FID(const uint8_t* BIT);
 	uint16_t rank(int pos, int digit);
 	uint16_t select(int idx, int digit);
-	uint8_t popCount(uint8_t bits);
 };
 
 #endif
